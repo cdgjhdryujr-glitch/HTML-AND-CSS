@@ -1,10 +1,11 @@
 <!Doctype HTML>
-<html lang="en">
+<form lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Global Ten-ex Logistics</title>
     <link href="style.css" rel="stylesheet" />
 </head>
+<button id="openDialog" class="dialog-btn" aria-haspopup="dialog" title="Open Dialog">Track Item</button>
 
 <body style="font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5;">
     <header style="background-color: #c7cbde; color: rgb(6, 6, 6); padding: 20px; text-align: center;">
@@ -26,4 +27,35 @@
         <p>Including Haulage, Supply chain management</p>
     </main>
 </body>
+<!-- dialog box ---->
+ <dialog id="infoDialog" class="modal" aria-label="Track item dialog"></dialog>
+    <div method="dialog" class="modal-content">
+    <button type="button" class="close" aria-label="Close dialog">&times;</button>
+   <h3>Track Your Item</h3>
+   <p>Enter tracking number:</p>
+   <input id="trackingNumber" name="tracking" type="text" placeholder="e.g. ABC-123"/>
+   <div class="actions"></div>
+   <button id="cancel" value="cancel">Cancel</button>
+   <button id="track" value="default">Track</button>
+    </div>
+</form>
+</dialog>
+<script>
+    const btn = document.getElementById('openDialog');
+    const dialog = document.getElementById('infoDialog');
+    btn.addEventListener('click',()=> dialog.showModal());
+    dialog.querySelector('.close').addEventListener('click',() => dialog.close());
+    // optional: handle track button 
+    dialog.querySelector('#track').addEventListener('click',() => {
+        const val = document.getElementById('trackingNumber').value.trim();
+if  (!val) { alert('Enter a tracking number'); return;}
+dialog.close();
+//replace the next line with your tracking action (fetch /navigate)
+lert('Tracking: ' + val);
+ });
+
+    
+</script>
+</button>
+</dialog>
 </html>

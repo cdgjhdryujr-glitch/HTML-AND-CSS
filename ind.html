@@ -39,6 +39,28 @@
             Welcome to Global Ten-ex Logistics Official website. We provide world-class logistics solutions for your business needs.
         </p>
         <p>Including Haulage, Supply chain management</p>
+
+        <!-- Instant quote section (new) -->
+    <section class="instant-quote-section" aria-labelledby="instant-quote-heading">
+      <div class="quote-card container">
+        <h3 id="instant-quote-heading">Instant quote</h3>
+        <p class="muted">Estimate cost to move cartons within Lagos</p>
+        <form class="quote-form" onsubmit="event.preventDefault(); alert('Estimate requested');">
+          <label class="visually-hidden" for="pickup">Pickup</label>
+          <input id="pickup" name="pickup" type="text" placeholder="Pickup LGA" />
+<label class="visually-hidden" for="dropoff">Dropoff</label>
+          <input id="dropoff" name="dropoff" type="text" placeholder="Dropoff LGA" />
+
+          <label class="visually-hidden" for="qty">Quantity</label>
+          <select id="qty" name="qty" aria-label="Carton quantity">
+            <option>1-50 cartons</option>
+            <option>51-100 cartons</option>
+            <option>100+ cartons</option>
+          </select>
+<div class="quote-actions">
+            <button type="submit" class="btn btn-primary">Estimate</button>
+            <button type="button" class="btn btn-ghost">Contact Sales</button>
+          </div>
     </main>
 
     <!-- single dialog -->
@@ -99,11 +121,10 @@
         <div class="footer-widgets">
           <div class="col about">
             <h4 id="footer-heading">About Us</h4>
-            <p>GLT is a 2nd, 3rd &amp; 4th party consumer-oriented supply chain management company with core competence in courier delivery service, haulage, logistics, air cargo services, service quality audit, third party verification and customs clearing &amp; handling.</p>
-
+            <p>GLT Logistics Delivering cartons across Lagos & Southern Nigeria — fast, reliable, and local.</p>
             <ul class="contact-list">
               <li><span class="icon">📞</span> +234-803-304-6514</li>
-              <li><span class="icon">📞</span> ++234-901-869-6531</li>
+              <li><span class="icon">📞</span> +234-901-869-6531</li>
               <li><span class="icon">✉️</span> globalten8@gmail.com</li>
               <li><span class="icon">🏠</span> 45, Opebi Road, Ikeja Lagos, Nigeria.</li>
             </ul>

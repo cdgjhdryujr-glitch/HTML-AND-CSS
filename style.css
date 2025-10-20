@@ -264,3 +264,213 @@ color: #060606;
   .footer-bottom .container { flex-direction: column; align-items:flex-start; gap:8px; }
   .to-top { align-self: flex-end; }
 }
+/* Instant quote card (matches screenshot) */
+.instant-quote-section { 
+  background: transparent;
+  padding: 28px 0;
+}
+
+.quote-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(19, 28, 33, 0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+max-width: 1100px;
+  margin: 18px auto;
+}
+.quote-card h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #0f2b2a; /* dark teal-ish heading */
+  font-weight: 800;
+}
+
+.quote-card .muted {
+  margin: 0 0 18px;
+  color: #6b7378;
+  font-size: 14px;
+}
+/* form controls: pill inputs like screenshot */
+.quote-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.quote-form input[type="text"],
+.quote-form select {
+  height: 52px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  background: #fff;
+  font-size: 15px;
+  color: #222;
+  outline: none;
+  box-shadow: none;
+}
+.quote-form input::placeholder { color: #9aa3a6; }
+
+/* actions: two large pill buttons side-by-side */
+.quote-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+/* base button */
+.btn {
+  height: 54px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 18px;
+}
+.quote-form input::placeholder { color: #9aa3a6; }
+
+/* actions: two large pill buttons side-by-side */
+.quote-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+/* base button */
+.btn {
+  height: 54px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 18px;
+}
+/* primary teal button (left) */
+.btn-primary {
+  background: linear-gradient(#0f7b6f, #0b6a60);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(11,106,96,0.12);
+}
+
+/* ghost / neutral (right) */
+.btn-ghost {
+  background: #f2f2f2;
+  color: #222;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+/* smaller screens: stack buttons */
+@media (max-width: 640px) {
+  .quote-card { padding: 18px; border-radius: 12px; }
+  .quote-actions { grid-template-columns: 1fr; }
+  .quote-form input[type="text"],
+  .quote-form select { height: 48px; }
+  .btn { height: 48px; font-size: 15px; }
+}
+
+/* utility for screen-reader-only labels */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+
+/* Instant quote card (matches screenshot) */
+.instant-quote-section { 
+  background: transparent;
+  padding: 28px 0;
+}
+
+.quote-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(19, 28, 33, 0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+  max-width: 1100px;
+  margin: 18px auto;
+}
+.quote-card h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #0f2b2a; /* dark teal-ish heading */
+  font-weight: 800;
+}
+
+.quote-card .muted {
+  margin: 0 0 18px;
+  color: #6b7378;
+  font-size: 14px;
+}
+/* form controls: pill inputs like screenshot */
+.quote-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.quote-form input[type="text"],
+.quote-form select {
+  height: 52px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  background: #fff;
+  font-size: 15px;
+  color: #222;
+  outline: none;
+  box-shadow: none;
+}
+.quote-form input::placeholder { color: #9aa3a6; }
+
+/* actions: two large pill buttons side-by-side */
+.quote-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+/* base button */
+.btn {
+  height: 54px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 18px;
+}
+/* primary teal button (left) */
+.btn-primary {
+  background: linear-gradient(#0f7b6f, #0b6a60);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(11,106,96,0.12);
+}
+
+/* ghost / neutral (right) */
+.btn-ghost {
+  background: #f2f2f2;
+  color: #222;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+/* primary teal button (left) */
+.btn-primary {
+  background: linear-gradient(#0f7b6f, #0b6a60);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(11,106,96,0.12);
+}
+
+/* ghost / neutral (right) */
+.btn-ghost {
+  background: #f2f2f2;
+  color: #222;
+  border: 1px solid rgba(0,0,0,0.04);
+}

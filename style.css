@@ -41,3 +41,134 @@ color: #060606;
 @media (max-width: 480px){
     .dialog-btn{ right: 10px; top: 10px; padding:6px 8px;}
     }
+    /* Ensure header is a positioning context for the dropdown */
+    .site-header{position:relative;}
+
+    /* main nav layout*/
+    .main-nav ul{ list-style: none; margin:0; padding: 0; display: flex; gap: 24px; justify-content: center;align-items: center;} ;
+    .main-nav a { color: #fff; text-decoration: none; padding:8px 12px; display: inline-block; }
+
+    /* dropdown container */
+    .main-nav .has-dropdown{ position:relative; }
+    .main-nav .dropdown{
+        display: none;
+        position:absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        min-width: 220px;
+        background: #f59e0b;
+        border-radius: 4px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        padding: 6px 0;
+        z-index: 60;
+    }
+
+    /* dropdown items */
+.main-nav .dropdown li { margin: 0; }
+.main-nav .dropdown li a {
+  display: block;
+  padding: 12px 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* show on hover / keyboard focus */
+.main-nav .has-dropdown:hover .dropdown,
+.main-nav .has-dropdown:focus-within .dropdown { display: block; }
+
+/* hover states */
+.main-nav .dropdown li a:hover { background: rgba(0,0,0,0.06); }
+
+/* mobile: stack nav and make dropdown full-width under the parent */
+@media (max-width: 640px) {
+  .main-nav ul { flex-direction: column; gap: 6px; }
+  .main-nav .dropdown { position: static; width: 100%; margin-top: 6px; }
+}
+
+/* Header / top nav (dark bar like screenshot) */
+.site-header {
+  background: #222;               /* dark background */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.site-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo img { height: 48px; display: block; }
+
+/* main nav - center */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* CTA button on right */
+.header-cta .cta {
+  background: linear-gradient(#ff9f1c, #ff7a00);
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+/* dropdown specifics (keeps your earlier dropdown style but anchored to centered nav) */
+.main-nav .has-dropdown { position: relative; }
+.main-nav .dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: #f59e0b;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 6px 0;
+  z-index: 60;
+}
+.main-nav .has-dropdown:hover .dropdown,
+.main-nav .has-dropdown.open .dropdown,
+.main-nav .has-dropdown:focus-within .dropdown { display: block; }
+
+.main-nav .dropdown li a { display:block; padding: 10px 14px; color:#fff; font-weight:600; text-transform:uppercase; border-top:1px solid rgba(255,255,255,0.08); }
+.main-nav .dropdown li a:hover { background: rgba(0,0,0,0.06); }
+
+/* responsive: stack and move CTA to end */
+@media (max-width: 900px) {
+  .site-header .container { flex-wrap: wrap; gap: 8px; }
+  .main-nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .header-cta { order: 3; width: 100%; display:flex; justify-content:flex-end; padding-right:8px; }
+}
+
+@media (max-width: 480px) {
+  .logo img { height: 42px; }
+  .dialog-btn{ right: 10px; top: 10px; padding:6px 8px; }
+  .main-nav ul { gap: 8px; font-size: 14px; }
+}
+

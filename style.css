@@ -10,4 +10,34 @@ nav a {
 
 
 /* base styles for navigation links */
+/*.site-header{
+    position:relative;
+    padding: 20px 40px;
+    text-align:center;
+    background-color: #c7cbde;
+color: #060606;
+}*/
 
+.dialog-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #ff9f1c;
+    color:#fff;
+    border:none ; 
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius:4px;
+}
+.modal-content .actions {display:flex; gap:8px; justify-content: flex-end; }
+.modal-content .actions button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.modal-content .actions #cancel{ background:#f3f3f3;  color: #fff; color: #000; }
+.modal-content .actions #track { background:#0073e6; color: #fff; }
+@media (max-width: 480px){
+    .dialog-btn{ right: 10px; top: 10px; padding:6px 8px;}
+    }

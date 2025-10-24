@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.site-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav ul li.has-dropdown {
+    position: relative;
+}
+
+.main-nav ul li.has-dropdown .dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul li.has-dropdown.open .dropdown {
+    display: block;
+}
+
+.main-nav ul li.has-dropdown .dropdown li {
+    display: block;
+}
+
+.header-cta .dialog-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.header-cta .dialog-btn:hover {
+    background-color: #0056b3;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quote-card {
+    margin-top: 20px;
+}
+
+.quote-actions {
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: #007bff;
+}
+
+.btn-ghost:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+}
+
+.modal[open] {
+    display: block;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+}

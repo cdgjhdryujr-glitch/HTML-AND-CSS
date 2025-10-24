@@ -1,0 +1,26 @@
+{
+  "name": "glt-maps-integration",
+  "version": "1.0.0",
+  "description": "Integration of Google Maps APIs for logistics tracking and location services.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "google-maps-react": "^2.0.6",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "live-server": "^1.2.1"
+  },
+  "keywords": [
+    "google-maps",
+    "logistics",
+    "api-integration"
+  ],
+  "author": "JOMI & Co",
+  "license": "MIT"
+}

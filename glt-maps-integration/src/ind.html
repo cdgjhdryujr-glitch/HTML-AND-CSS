@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Global Ten-ex Logistics - Maps Integration</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- load local JS (maps.js defines initMap globally) -->
+  <script src="maps/maps.js"></script>
+  <script src="maps/autocomplete.js" defer></script>
+  <script src="maps/distance-matrix.js" defer></script>
+  <script src="UI.js" defer></script>
+
+  <!-- Google Maps JS: only once, after maps.js (maps.js must define initMap) -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+  </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5;">
+  <header class="site-header">
+    <div class="container">
+      <a href="logistics logo.png" class="logo" aria-label="GTX LOGO">
+        <img src="logistics logo.png" alt="GLT TRUCK" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li class="has-dropdown">
+            <a href="#" aria-haspopup="true">SERVICES</a>
+            <ul class="dropdown" aria-label="Services submenu">
+              <li><a href="who we are.html">WHO WE ARE</a></li>
+              <li><a href="management.html">MANAGEMENT TEAM</a></li>
+            </ul>
+          </li>
+          <li><a href="career.html">CAREERS</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <button id="openDialog" class="dialog-btn" aria-haspopup="dialog" title="Open Dialog">Track Item</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 900px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 5px;">
+    <h1>Welcome to Global Ten-ex Logistics</h1>
+    <p style="font-size: 18px; line-height: 1.6; color: #333;">
+      We provide world-class logistics solutions for your business needs.
+    </p>
+
+    <section class="instant-quote-section" aria-labelledby="instant-quote-heading">
+      <div class="quote-card container">
+        <h3 id="instant-quote-heading">Instant quote</h3>
+        <p class="muted">Estimate cost to move cartons within Lagos</p>
+
+        <form class="quote-form" id="quoteForm" onsubmit="return false;">
+          <label class="visually-hidden" for="pickup">Pickup</label>
+          <input id="pickup" name="pickup" type="text" placeholder="Pickup LGA" autocomplete="off" />
+
+          <label class="visually-hidden" for="dropoff">Dropoff</label>
+          <input id="dropoff" name="dropoff" type="text" placeholder="Dropoff LGA" autocomplete="off" />
+
+          <label class="visually-hidden" for="qty">Quantity</label>
+          <select id="qty" name="qty" aria-label="Carton quantity">
+            <option>1-50 cartons</option>
+            <option>51-100 cartons</option>
+            <option>100-350 cartons</option>
+            <option>350-450 cartons</option>
+            <option>450-600 cartons</option>
+            <option>600+ cartons</option>
+          </select>
+
+          <div class="quote-actions">
+            <button id="estimateBtn" type="button" class="btn btn-primary">Estimate</button>
+            <button id="contactBtn" type="button" class="btn btn-ghost">Contact Sales</button>
+          </div>
+        </form>
+
+        <!-- map preview -->
+        <div id="map" style="height:260px; margin-top:18px; border-radius:10px; overflow:hidden;"></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="infoDialog" class="modal" aria-label="Track item dialog">
+    <form method="dialog" class="modal-content">
+      <button type="button" class="close" aria-label="Close dialog">&times;</button>
+      <h3>Track Your Item</h3>
+      <p>Enter tracking number:</p>
+      <input id="trackingNumber" name="tracking" type="text" placeholder="e.g. ABC-123" />
+      <div class="actions">
+        <button id="cancel" value="cancel" type="reset">Cancel</button>
+        <button id="track" value="default" type="button">Track</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
